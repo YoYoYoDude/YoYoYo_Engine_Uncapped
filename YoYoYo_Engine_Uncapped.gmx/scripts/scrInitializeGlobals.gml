@@ -56,6 +56,11 @@ global.windowHeightPrev = 0;
 global.controllerMode = false;  //keeps track of whether to use keyboard or controller
 global.controllerDelay = -1;    //sets delay between switching between keyboard/controller so that the player can't use both at the same time
 
+global.delta = 0;
+
+global.maxFPS = 10000;  //maximum framerate cap
+global.minFPS = 50;   //minimum framerate before the game starts lagging
+
 
 display_set_gui_size(view_wview[0],view_hview[0]);  //set the correct gui size for the Draw GUI event
 

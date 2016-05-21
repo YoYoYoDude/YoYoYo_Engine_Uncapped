@@ -62,6 +62,31 @@ audio_pause_sound(global.currentMusic);
         </arguments>
       </action>
     </event>
+    <event eventtype="3" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///update delta
+
+global.delta = 1/(max(global.minFPS,1/(delta_time/1000000)) * (1/50));
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -410,7 +435,7 @@ alarm[0] = 50;  //pause music when it's done fading
 if (!instance_exists(objPlayMusic))  //make sure the play music object isn't in the current room
     scrGetMusic();  //find and play the proper music for the current room
 
-room_speed = 50;    //make sure game is running at the correct frame rate
+room_speed = global.maxFPS;    //make sure game is running at the correct frame rate
 scrSetRoomCaption();    //make sure window caption stays updated
 </string>
           </argument>

@@ -162,6 +162,10 @@
       <script>scripts\scrMakeShapes.gml</script>
       <script>scripts\scrMakeCircle.gml</script>
     </scripts>
+    <scripts name="delta">
+      <script>scripts\scrDeltaApply.gml</script>
+      <script>scripts\scrDeltaRevert.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fDefault30</font>

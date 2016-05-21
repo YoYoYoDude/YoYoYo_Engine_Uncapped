@@ -71,6 +71,29 @@ if (global.autosave) //save the game if currently set to autosave
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>///revert delta
+
+scrDeltaRevert();
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>if ((x &lt; 0 || x &gt; room_width || y &lt; 0 || y &gt; room_height) &amp;&amp; global.edgeDeath)  //check if player has left the room
     scrKillPlayer();
 </string>
@@ -395,6 +418,29 @@ if (instance_exists(objSlope) &amp;&amp; hspeed != 0)
     xprevious = x;
     yprevious = y;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///apply delta
+
+scrDeltaApply();
 </string>
           </argument>
         </arguments>
