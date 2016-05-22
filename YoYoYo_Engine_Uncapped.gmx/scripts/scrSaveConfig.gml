@@ -8,6 +8,7 @@ ini_write_real("Settings","Volume_level",global.volumeLevel);
 ini_write_real("Settings","Fullscreen_mode",global.fullscreenMode);
 ini_write_real("Settings","Smoothing_mode",global.smoothingMode);
 ini_write_real("Settings","Vsync_mode",global.vsyncMode);
+ini_write_real("Settings","Locked_FPS_mode",global.lockedFPSMode);
 
 //keyboard controls
 ini_write_real("Controls","Left",global.leftButton[0]);

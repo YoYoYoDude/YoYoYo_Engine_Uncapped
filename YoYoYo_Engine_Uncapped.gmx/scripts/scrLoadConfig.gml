@@ -17,6 +17,10 @@ global.vsyncMode = ini_read_real("Settings","Vsync_mode",false);
 if (global.vsyncMode)   //only need to set vsync mode if it's on since it's off by default
     scrSetVsync();
 
+global.lockedFPSMode = ini_read_real("Settings","Locked_FPS_mode",false);
+if (global.lockedFPSMode)
+    global.maxFPS = 50;
+
 //keyboard controls
 global.leftButton[0] = ini_read_real("Controls","Left",vk_left);
 global.rightButton[0] = ini_read_real("Controls","Right",vk_right);

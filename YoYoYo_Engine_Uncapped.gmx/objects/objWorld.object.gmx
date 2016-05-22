@@ -81,7 +81,10 @@ audio_pause_sound(global.currentMusic);
             <kind>1</kind>
             <string>///update delta
 
-global.delta = 1/(max(global.minFPS,1/(delta_time/1000000)) * (1/50));
+if (!global.lockedFPSMode)
+    global.delta = 50 / max(global.minFPS,1000000/delta_time);
+else
+    global.delta = 1;
 </string>
           </argument>
         </arguments>

@@ -73,7 +73,7 @@ if (global.autosave) //save the game if currently set to autosave
             <kind>1</kind>
             <string>///revert delta
 
-scrDeltaRevert();
+scrDeltaApplyEndStep();
 </string>
           </argument>
         </arguments>
@@ -440,7 +440,7 @@ if (instance_exists(objSlope) &amp;&amp; hspeed != 0)
             <kind>1</kind>
             <string>///apply delta
 
-scrDeltaApply();
+scrDeltaApplyStep();
 </string>
           </argument>
         </arguments>

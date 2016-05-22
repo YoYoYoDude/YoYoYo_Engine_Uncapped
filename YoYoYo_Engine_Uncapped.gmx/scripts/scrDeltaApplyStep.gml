@@ -1,4 +1,4 @@
-///scrDeltaApply()
+///scrDeltaApplyStep()
 ///sets built-in variables based on the current delta (use at the end of step event)
 
 gravity *= global.delta;

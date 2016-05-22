@@ -163,8 +163,8 @@
       <script>scripts\scrMakeCircle.gml</script>
     </scripts>
     <scripts name="delta">
-      <script>scripts\scrDeltaApply.gml</script>
-      <script>scripts\scrDeltaRevert.gml</script>
+      <script>scripts\scrDeltaApplyStep.gml</script>
+      <script>scripts\scrDeltaApplyEndStep.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
