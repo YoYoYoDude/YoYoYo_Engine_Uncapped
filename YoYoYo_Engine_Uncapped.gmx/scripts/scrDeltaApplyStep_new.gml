@@ -3,13 +3,13 @@
 
 gravity *= global.delta;
 
-hspeed += lengthdir_x(gravity,gravity_direction);   //put these before because of acceleration
+hspeed += lengthdir_x(gravity,gravity_direction)/2;   //put these before because of acceleration
 hspeed *= global.delta;
 
-vspeed += lengthdir_y(gravity,gravity_direction);
+vspeed += lengthdir_y(gravity,gravity_direction)/2;
 vspeed *= global.delta;
 
-show_debug_message("old: " + string(vspeed));
+show_debug_message("new: " + string(vspeed));
 
 gravPrev = gravity;
 gravity = 0;    //gravity was already applied
