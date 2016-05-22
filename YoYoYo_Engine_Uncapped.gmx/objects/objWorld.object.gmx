@@ -85,6 +85,8 @@ if (!global.lockedFPSMode)
     global.delta = 50 / max(global.minFPS,1000000/delta_time);
 else
     global.delta = 1;
+
+global.delta *= global.timeScale;
 </string>
           </argument>
         </arguments>

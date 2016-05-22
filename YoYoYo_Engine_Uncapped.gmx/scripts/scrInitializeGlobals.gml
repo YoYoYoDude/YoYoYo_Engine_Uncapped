@@ -57,6 +57,7 @@ global.controllerMode = false;  //keeps track of whether to use keyboard or cont
 global.controllerDelay = -1;    //sets delay between switching between keyboard/controller so that the player can't use both at the same time
 
 global.delta = 0;
+global.timeScale = 1;   //multiplier for game speed
 
 global.maxFPS = 10000;  //maximum framerate cap
 global.minFPS = 50;   //minimum framerate before the game starts lagging
