@@ -9,7 +9,8 @@ hspeed *= global.delta;
 vspeed += lengthdir_y(gravity,gravity_direction)/2;
 vspeed *= global.delta;
 
-show_debug_message("new: " + string(vspeed));
+//show_debug_message("new vspeed: " + string(vspeed));
+//show_debug_message("new y: " + string(y));
 
 gravPrev = gravity;
 gravity = 0;    //gravity was already applied

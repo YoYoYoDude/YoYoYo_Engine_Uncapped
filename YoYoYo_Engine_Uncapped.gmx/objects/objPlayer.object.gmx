@@ -27,13 +27,19 @@
             <kind>1</kind>
             <string>frozen = false; //sets if the player can move or not
 
-jump = 8.5 * global.grav; //set how fast the player jumps
-jump2 = 7 * global.grav; //sets how fast the player double jumps
-gravity = 0.4 * global.grav; //player gravity
+gravity = 0.4;
+//gravity = 0.4175 * global.grav; //0.4;  //0.4175 * global.grav; //0.4 * global.grav;  //0.415 * global.grav; //player gravity
+
+vspeed = gravity/2;
+
+jump = 8.5 - (gravity/2);
+jump2 = 7 - (gravity/2);
+//jump = 8.6; //8.0825//8.5 * global.grav - (gravity/2); //set how fast the player jumps
+//jump2 = 7.1;  //7 * global.grav - (gravity/2); //sets how fast the player double jumps
 
 djump = 1; //allow the player to double jump as soon as he spawns
 maxSpeed = 3;   //max horizontal speed
-maxVspeed = 9;  //max vertical speed
+maxVspeed = 9 + (gravity/2);    //9.18875; //9;    //9.18875;    //(gravity/2-0.02);  //max vertical speed
 image_speed = 0.2; //initial speed of animation
 onPlatform = false; //sets if player is currently standing on a platform
 

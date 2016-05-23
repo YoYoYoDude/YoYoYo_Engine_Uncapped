@@ -44,11 +44,15 @@ scrSetPlayerMask(); //set the player's hitbox
 if (global.difficulty == 0 &amp;&amp; global.gameStarted)   //create the player's bow
     instance_create(x,y,objBow);
 
+/*
 if (global.autosave) //save the game if currently set to autosave
 {
     scrSaveGame(true);
     global.autosave = false;
 }
+*/
+
+image_blend = c_red;
 </string>
           </argument>
         </arguments>
