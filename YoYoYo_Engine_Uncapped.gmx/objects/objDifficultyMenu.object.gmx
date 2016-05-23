@@ -147,8 +147,8 @@ for (var i = 1; i &lt;= 3; i++)
           <argument>
             <kind>1</kind>
             <string>//animate select sprites
-appleIndex = (appleIndex + 1/15) mod 2;
-playerIndex = (playerIndex + 1/5) mod 4;
+appleIndex = (appleIndex + ((1/15)*global.delta)) mod 2;
+playerIndex = (playerIndex + ((1/5)*global.delta)) mod 4;
 
 if (scrButtonCheckPressed(global.menuOptionsButton))
 {

@@ -164,9 +164,7 @@
     </scripts>
     <scripts name="delta">
       <script>scripts\scrDeltaApplyStep.gml</script>
-      <script>scripts\scrDeltaApplyStep_new.gml</script>
       <script>scripts\scrDeltaApplyEndStep.gml</script>
-      <script>scripts\scrDeltaApplyEndStep_new.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -190,7 +188,6 @@
     <objects name="player">
       <object>objects\objPlayerStart</object>
       <object>objects\objPlayer</object>
-      <object>objects\object91</object>
       <object>objects\objBow</object>
       <object>objects\objBullet</object>
       <object>objects\objBloodEmitter</object>

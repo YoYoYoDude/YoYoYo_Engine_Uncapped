@@ -27,19 +27,16 @@
             <kind>1</kind>
             <string>frozen = false; //sets if the player can move or not
 
-gravity = 0.4;
-//gravity = 0.4175 * global.grav; //0.4;  //0.4175 * global.grav; //0.4 * global.grav;  //0.415 * global.grav; //player gravity
+gravity = 0.4 * global.grav; //player gravity
 
 vspeed = gravity/2;
 
-jump = 8.5 - (gravity/2);
-jump2 = 7 - (gravity/2);
-//jump = 8.6; //8.0825//8.5 * global.grav - (gravity/2); //set how fast the player jumps
-//jump2 = 7.1;  //7 * global.grav - (gravity/2); //sets how fast the player double jumps
+jump = 8.5 * global.grav; //set how fast the player jumps
+jump2 = 7 * global.grav; //sets how fast the player double jumps
 
 djump = 1; //allow the player to double jump as soon as he spawns
 maxSpeed = 3;   //max horizontal speed
-maxVspeed = 9 + (gravity/2);    //9.18875; //9;    //9.18875;    //(gravity/2-0.02);  //max vertical speed
+maxVspeed = 9;    //max vertical speed
 image_speed = 0.2; //initial speed of animation
 onPlatform = false; //sets if player is currently standing on a platform
 
@@ -79,7 +76,7 @@ if (global.autosave) //save the game if currently set to autosave
             <kind>1</kind>
             <string>///revert delta
 
-scrDeltaApplyEndStep_new();
+scrDeltaApplyEndStep();
 </string>
           </argument>
         </arguments>
@@ -207,7 +204,7 @@ var slideBlockTouching = instance_place(x,y+(global.grav),objSlideBlock);   //ch
 if (slideBlockTouching != noone)    //on a slide block, start moving with it
     hspeed += slideBlockTouching.h;
 
-if (abs(vspeed) &gt; maxVspeed) {vspeed = sign(vspeed)*maxVspeed;} //check if moving vertically faster than max speed
+if (abs(vspeed) &gt; maxVspeed + (gravity/2)) {vspeed = sign(vspeed)*(maxVspeed + (gravity/2));} //check if moving vertically faster than max speed
 
 if (!frozen)    //check if frozen before doing anything
 {
@@ -446,7 +443,7 @@ if (instance_exists(objSlope) &amp;&amp; hspeed != 0)
             <kind>1</kind>
             <string>///apply delta
 
-scrDeltaApplyStep_new();
+scrDeltaApplyStep();
 </string>
           </argument>
         </arguments>

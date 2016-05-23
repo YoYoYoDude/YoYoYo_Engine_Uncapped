@@ -60,7 +60,7 @@ global.delta = 0;
 global.timeScale = 1;   //multiplier for game speed
 
 global.maxFPS = 10000;  //maximum framerate cap
-global.minFPS = 50;   //minimum framerate before the game starts lagging
+global.minFPS = 25;   //minimum framerate before the game starts lagging
 
 
 display_set_gui_size(view_wview[0],view_hview[0]);  //set the correct gui size for the Draw GUI event
